@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Amor Bello ❤️🎂</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+    <div class="screen-wrap">
+
+        <section class="screen active" id="screen-bienvenida">
+            <h1>¡Feliz Cumpleaños, Mi Amor!</h1>
+            <p>Esta es una pequeña sorpresa por nuestro tiempo juntos. 😊</p>
+            <button class="btn nextScreen" data-target="screen-video">Comenzar 💖</button> 
+        </section>
+
+        <section class="screen" id="screen-video">
+            <h2>Amo nuestro tiempo juntos😘</h2>
+            <video id="videoSorpresa" controls>
+                <source src="video/Videocumple.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+            <button class="btn nextScreen" data-target="screen-collage">Siguiente 💌</button>
+        </section>
+
+        <section class="screen" id="screen-collage">
+            <div id="collageContainer"></div>
+            <div id="collageText">Te amo mucho ❤️</div>
+
+            <div id="collageControls">
+                <button class="btn" id="prevCollage">⬅</button>
+                <button class="btn" id="nextCollage">➡</button>
+            </div>
+
+            <button class="btn nextScreen" data-target="screen-carta">Siguiente 💖</button>
+        </section>
+
+        <section class="screen" id="screen-carta">
+            <h2 id="carta-titulo">Para Mi Amor</h2> 
+            <div id="carta-corazon">💖✨</div> 
+            <div id="carta-contenido">
+                <p><strong>Mi amor, Hermoso...</strong></p>
+                <p>Hoy es tu día especial y quiero</p>
+                <p>que sepas lo mucho que significas para mí.</p>
+                <p>Cada día a tu lado es un regalo, y tu sonrisa ilumina mi mundo. Eres mi compañero, mi mejor amigo, y el amor de mi vida.</p>
+                <p>Espero que este día esté lleno de alegría y momentos inolvidables. Gracias por cada risa, cada aventura y cada instante que hemos compartido.</p>
+                <p>Te amo con todo mi corazón, Mi Amor ❤️ ¡Feliz Cumpleaños!</p>
+                <p>Con todo mi amor, Tu BB Hermosa 💕</p>
+            </div>
+            <button class="btn nextScreen" data-target="screen-ruleta">Siguiente 🎁</button>
+        </section>
+
+        <section class="screen" id="screen-ruleta">
+            <h2>🎡 Ruleta del Amor</h2>
+            <canvas id="ruleta" width="300" height="300"></canvas>
+            <div id="resultadoRuleta"></div>
+            <button class="btn" id="girarRuleta">Girar Ruleta</button>
+            <button class="btn nextScreen" data-target="screen-cuponera">Siguiente</button>
+        </section>
+
+        <section class="screen" id="screen-cuponera">
+            <h2>🎀 ¡Escoje el que mas te guste!</h2>
+            <div id="cupones"></div>
+            <button class="btn nextScreen" data-target="screen-bienvenida">Volver al inicio</button>
+        </section>
+
+    </div>
+
+    <button id="toggleMusic" class="btn music-btn">🔊</button>
+
+    <audio id="bgMusicElement" loop>
+        <source src="music/Amor Completo (Letra).mp3" type="audio/mp3">
+        Tu navegador no soporta el audio.
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
