@@ -237,22 +237,6 @@ function drawRouletteWheel() {
         ctx.restore();
     }
 
-    // dibujar puntero superior (triángulo)
-    ctx.save();
-    ctx.setTransform(1,0,0,1,0,0); // dibujar el puntero en coordenadas físicas para que quede fijo
-    // pintar el triángulo en la parte superior del canvas (usar CSS px, no DPR-scaled)
-    const triX = canvas.width / DPR / 2;
-    ctx.fillStyle = "#5cc1ff";
-    ctx.beginPath();
-    ctx.moveTo(triX - 12, 25);
-    ctx.lineTo(triX + 12, 25);
-    ctx.lineTo(triX, 45);
-    ctx.closePath();
-    ctx.fill();
-    ctx.strokeStyle = "white";
-    ctx.lineWidth = 2;
-    ctx.stroke();
-    ctx.restore();
 }
 
 // ---------------------------------

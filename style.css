@@ -123,7 +123,7 @@ html, body {
 #screen-video video {
   width: 90vw;
   max-width: 700px;
-  max-height: 55vh;
+  max-height: 60vh;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -154,7 +154,7 @@ html, body {
   flex-grow: 1;
   width: 90%;
   max-width: 600px;
-  max-height: 50vh;
+  max-height: 60vh;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -274,7 +274,7 @@ html, body {
     width: 350px !important;
     height: 350px !important;
     max-width: 90vw;
-    max-height: 40vh;
+    max-height: 50vh;
     background: #ffffff !important;
     border: 5px solid #830808 !important;
     border-radius: 50%;
@@ -293,6 +293,23 @@ html, body {
     font-size: 1.2em;
     color: #b1032e;
     z-index: 2;
+}
+#ruleta-puntero {
+    position: absolute;
+    /* Posicionarlo en el centro superior del canvas */
+    top: 50%; /* Esto se ajustará con el transform */
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 175px)); /* Centra y sube 175px (mitad de ruleta + margen) */
+    
+    /* Forma del triángulo */
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    /* Color del triángulo y borde */
+    border-top: 25px solid #5cc1ff; /* El triángulo apunta hacia abajo */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* Asegura que esté por encima de la ruleta */
 }
 
 #girarRuleta {
@@ -462,17 +479,16 @@ html, body {
     }
 
     .cupon {
-        width: 130px;
-        height: 80px;
-        font-size: 0.85em;
+        width: 90vw; /* Usamos casi todo el ancho de la pantalla */
+        height: 90px;
+        /* Hacemos la fuente más legible */
+        font-size: 1.1em; 
+        /* Eliminamos el gap forzado si ahora ocupan todo el ancho */
+        margin-bottom: 20px;
     }
     
     #ruleta {
-        width: 300px;
-        height: 300px;
+        width: 250px;
+        height: 250px;
     }
-
 }
-
-
-
