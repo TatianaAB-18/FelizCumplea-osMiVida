@@ -123,7 +123,7 @@ html, body {
 #screen-video video {
   width: 90vw;
   max-width: 700px;
-  max-height: 75vh;
+  max-height: 55vh;
   border-radius: 15px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -473,3 +473,4 @@ html, body {
     }
 
 }
+
