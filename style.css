@@ -466,7 +466,7 @@ html, body {
 
 @media (max-width: 480px) {
     #carta-titulo {
-        font-size: 2em;
+        font-size: 2.2em;
     }
     
     #carta-corazon {
@@ -474,7 +474,7 @@ html, body {
     }
     
     #carta-contenido {
-        font-size: 1em;
+        font-size: 1.1em;
         padding: 15px;
     }
 
@@ -493,3 +493,4 @@ html, body {
     }
 
 }
+
